@@ -8,10 +8,18 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <base href="${pageContext.request.contextPath}">
+    <title>Jake's Shop :: Login</title>
+    <link rel="stylesheet" type="text/css" href="distjava_jmierow_webapp/css/style.css"/>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#list">Item List</a></li>
+        <li><a href="#itemdetail">Item Detail</a></li>
+        <li><a class="active" href="#login">Login</a></li>
+    </ul>
 </head>
 <body>
-<h1>Hello World</h1>
-</body>
+
+
+    </body>
 </html>
