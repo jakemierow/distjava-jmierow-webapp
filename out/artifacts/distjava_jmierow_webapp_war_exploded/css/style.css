@@ -1,13 +1,12 @@
-body {
+body
+{
     background-color: lightblue;
 }
 
 h1
 {
-    font-family: SansSerif;
-    font-size: 45px;
-    text-decoration-color: limegreen;
     text-align: center;
+    text-size: 50px;
 }
 
 ul {
@@ -38,4 +37,10 @@ li a:hover:not(.active) {
 li a.active {
     color: white;
     background-color: #4CAF50;
+}
+
+p
+{
+    text-align: center;
+    text-size: 50px;
 }

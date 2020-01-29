@@ -19,6 +19,18 @@
     </ul>
 </head>
 <body>
+<h1 align="center">Jake's Shop</h1>
+<p>Product Name<label>
+    <input name="Product" type="text">
+</label></p>
+<p>Price<label>
+    <input name="Category" type="text">
+</label></p>
+<p>Category<label>
+    <input name="Category" type="text">
+</label></p>
+<p id="save"><button class="btn">Save</button></p>
+
 
 </body>
 </html>

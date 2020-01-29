@@ -19,7 +19,16 @@
     </ul>
 </head>
 <body>
-
+<h1 align="center">Login to Jake's Shop</h1>
+<form>
+    <p>Username <label>
+        <input name="Username" type="text">
+    </label></p>
+    <p>Password <label>
+        <input name="Password" type="text">
+    </label></p>
+    <p id="login"><button class="btn">Login</button></p>
+</form>
 
     </body>
 </html>

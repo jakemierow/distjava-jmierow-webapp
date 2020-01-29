@@ -21,7 +21,6 @@
 <body>
 <main>
    <br><br><br><br><br><br><br><br><br><br><br>
-    <img align="center" src="${pageContext.request.contextPath}/img/shoppingbags.png">
     <h1>Jake's Shop</h1>
     </main>
 

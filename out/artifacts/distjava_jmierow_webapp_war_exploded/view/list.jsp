@@ -17,11 +17,15 @@
         <li><a href="#itemdetail">Item Detail</a></li>
         <li><a href="#login">Login</a></li>
     </ul>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
-
-
+<h1 align="center">Jake's Shop</h1>
+<p>TV <i class='fa fa-edit' style='font-size:36px'></i> <i class='fa fa-trash-alt' style='font-size:36px'></i></p>
+<p>Laptop <i class='fa fa-edit' style='font-size:36px'></i> <i class='fa fa-trash-alt' style='font-size:36px'></i></p></p>
+<p>Headphones <i class='fa fa-edit' style='font-size:36px'></i> <i class='fa fa-trash-alt' style='font-size:36px'></i></p></p>
+<p id="additem"><button class="btn" >Add Item</button></p>
  </body>
 
 </html>
