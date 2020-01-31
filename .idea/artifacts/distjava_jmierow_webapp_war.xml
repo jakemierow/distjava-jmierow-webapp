@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="distjava-jmierow-webapp:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>distjava-jmierow-webapp</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="myWebApp.war">
+      <element id="artifact" artifact-name="distjava-jmierow-webapp:war exploded" />
+    </root>
+  </artifact>
+</component>
