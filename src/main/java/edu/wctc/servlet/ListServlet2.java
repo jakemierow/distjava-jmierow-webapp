@@ -10,7 +10,6 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.*;
 import java.util.ArrayList;
-import java.util.List;
 
 @WebServlet(name = "ListServlet2", urlPatterns = "/list2")
 public class ListServlet2 extends HttpServlet {

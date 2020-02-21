@@ -1,5 +1,7 @@
 package edu.wctc.entity;
 
+import edu.wctc.entity.ProductDetail;
+
 public class Product {
     private int productID;
     private String productName;
