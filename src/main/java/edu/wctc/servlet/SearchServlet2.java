@@ -39,7 +39,7 @@ public class SearchServlet2 extends HttpServlet {
             String absPath = getServletContext().getRealPath("/") + DATABASE_PATH;
 
             // Build the query as a String
-            StringBuilder sql = new StringBuilder("select productID, ProductName ");
+            StringBuilder sql = new StringBuilder("select products.productID, ProductName, categoryId, price ");
             sql.append("from products ");
             sql.append("join productdetails on (products.productid = productdetails.productid)");
             sql.append("where productName = ?"); // Don't end SQL with semicolon!
@@ -70,7 +70,7 @@ public class SearchServlet2 extends HttpServlet {
             }
 
             request.setAttribute("products", ProductList);
-            request.getRequestDispatcher("search2.jsp").forward(request, response);
+            request.getRequestDispatcher("view/search2.jsp").forward(request, response);
 
         } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();

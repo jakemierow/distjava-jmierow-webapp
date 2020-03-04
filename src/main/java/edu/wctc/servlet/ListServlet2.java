@@ -57,7 +57,7 @@ public class ListServlet2 extends HttpServlet {
             }
 
             request.setAttribute("products", ProductList);
-            request.getRequestDispatcher("list2.jsp").forward(request, response);
+            request.getRequestDispatcher("view/list2.jsp").forward(request, response);
 
         } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();

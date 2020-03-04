@@ -12,10 +12,10 @@
     <title>Jake's Shop :: Home</title>
     <link rel="stylesheet" type="text/css" href="distjava_jmierow_webapp/css/style.css"/>
     <ul>
-        <li><a class="active" href="#home">Home</a></li>
-        <li><a href="#list">Item List</a></li>
-        <li><a href="#itemdetail">Item Detail</a></li>
-        <li><a href="#login">Login</a></li>
+        <li><a class="active" href="${pageContext.request.contextPath}/">Home</a></li>
+        <li><a href="${pageContext.request.contextPath}/list">Item List</a></li>
+        <li><a href="${pageContext.request.contextPath}/detail">Item Detail</a></li>
+        <li><a href="${pageContext.request.contextPath}/login">Login</a></li>
     </ul>
 </head>
 <body>
