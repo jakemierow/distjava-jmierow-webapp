@@ -1,37 +1,29 @@
 package edu.wctc.entity;
 
-import edu.wctc.entity.ProductDetail;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
+import javax.persistence.*;
+
+@Getter
+@Setter
+@NoArgsConstructor
+@Entity
+@Table(name = "products")
 public class Product {
-    private int productID;
-    private String productName;
-    private ProductDetail detail;
 
-    public Product() {
+@Id
+@GeneratedValue(strategy = GenerationType.IDENTITY)
+@Column(name = "productid")
+private int id;
 
-    }
+@Column(name = "productname")
+private String name;
 
-    public ProductDetail getDetail() {
-        return detail;
-    }
+public Product(String name)
+{
+    this.name = name;
+}
 
-    public void setDetail(ProductDetail detail) {
-        this.detail = detail;
-    }
-
-    public int getProductID() {
-        return productID;
-    }
-
-    public void setProductID(int productID) {
-        this.productID = productID;
-    }
-
-    public String getProductName() {
-        return productName;
-    }
-
-    public void setProductName(String productName) {
-        this.productName = productName;
-    }
 }

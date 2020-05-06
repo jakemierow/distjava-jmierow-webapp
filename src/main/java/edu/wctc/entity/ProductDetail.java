@@ -1,26 +1,31 @@
 package edu.wctc.entity;
 
+import javax.persistence.*;
+
+@Table(name = "productdetails")
 public class ProductDetail {
-    private int CategoryID;
-    private int Price;
 
-public ProductDetail() {
+    @OneToOne(cascade = {CascadeType.DETACH,
+            CascadeType.MERGE,
+            CascadeType.PERSIST,
+            CascadeType.REFRESH})
+    @JoinColumn(name = "productid")
+    private Product product;
 
-}
+    @Column(name = "price")
+    private int price;
 
-    public int getCategoryID() {
-        return CategoryID;
+    @OneToOne(cascade = {CascadeType.DETACH,
+            CascadeType.MERGE,
+            CascadeType.PERSIST,
+            CascadeType.REFRESH})
+    @JoinColumn(name = "categoryid")
+    private Category category;
+
+
+    public ProductDetail(int price)
+    {
+        this.price = price;
     }
 
-    public void setCategoryID(int categoryID) {
-        CategoryID = categoryID;
-    }
-
-    public int getPrice() {
-        return Price;
-    }
-
-    public void setPrice(int price) {
-        Price = price;
-    }
 }
