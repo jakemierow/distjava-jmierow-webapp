@@ -1,15 +1,25 @@
 package edu.wctc.entity;
 
-import javax.persistence.*;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
+import javax.persistence.*;
+import java.io.Serializable;
+
+@Getter
+@Setter
+@NoArgsConstructor
+@Entity
 @Table(name = "productdetails")
-public class ProductDetail {
+public class ProductDetail implements Serializable {
 
     @OneToOne(cascade = {CascadeType.DETACH,
             CascadeType.MERGE,
             CascadeType.PERSIST,
             CascadeType.REFRESH})
     @JoinColumn(name = "productid")
+    @Id
     private Product product;
 
     @Column(name = "price")

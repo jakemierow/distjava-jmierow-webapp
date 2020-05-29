@@ -44,3 +44,9 @@ p
     text-align: center;
     text-size: 50px;
 }
+
+table.center {
+    width: auto;
+    margin-left:auto;
+    margin-right:auto;
+}

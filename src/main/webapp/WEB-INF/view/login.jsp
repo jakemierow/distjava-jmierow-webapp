@@ -1,3 +1,4 @@
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%--
   Created by IntelliJ IDEA.
   User: Jake
@@ -10,25 +11,35 @@
 <head>
     <base href="${pageContext.request.contextPath}">
     <title>Jake's Shop :: Login</title>
-    <link rel="stylesheet" type="text/css" href="distjava_jmierow_webapp/css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="${cp}/resources/css/style.css"/>
     <ul>
-        <li><a href="${pageContext.request.contextPath}/">Home</a></li>
-        <li><a href="${pageContext.request.contextPath}/list">Item List</a></li>
+        <li><a href="${pageContext.request.contextPath}/product">Home</a></li>
+        <li><a href="${pageContext.request.contextPath}/product/list">Item List</a></li>
         <li><a href="${pageContext.request.contextPath}/detail">Item Detail</a></li>
         <li><a class="active" href="${pageContext.request.contextPath}/login">Login</a></li>
     </ul>
 </head>
 <body>
+<div id="container">
+    <form:form action="${cp}/authenticate" method="POST">
+        <table>
+            <tr>
+                <td><label>Username</label></td>
+                <td><input type="text" name="username"</td>
+            </tr>
+            <tr>
+                <td><label>Password</label></td>
+                <td><input tpye="password" name="password"</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Login>"</td>
+            </tr>
+        </table>
+    </form:form>
+</div>
 <h1 align="center">Login to Jake's Shop</h1>
-<form>
-    <p>Username <label>
-        <input name="Username" type="text">
-    </label></p>
-    <p>Password <label>
-        <input name="Password" type="text">
-    </label></p>
-    <p id="login"><button class="btn">Login</button></p>
-</form>
+
 
     </body>
 </html>

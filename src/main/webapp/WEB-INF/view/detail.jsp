@@ -8,9 +8,8 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <base href="${pageContext.request.contextPath}">
     <title>Jake's Shop :: Item Detail</title>
-    <link rel="stylesheet" type="text/css" href="distjava_jmierow_webapp/css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="${cp}/resources/css/style.css"/>
     <ul>
         <li><a href="${pageContext.request.contextPath}/">Home</a></li>
         <li><a href="${pageContext.request.contextPath}/list">Item List</a></li>

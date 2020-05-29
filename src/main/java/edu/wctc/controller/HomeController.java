@@ -1,21 +1,42 @@
 package edu.wctc.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-// Inherits from @Component, a specialized component
-// Will be picked up by component scanning
+import javax.servlet.http.HttpServletRequest;
+
 @Controller
 public class HomeController {
-    // Maps a path to a method name
-    // This one maps root to showHomePage
-    @RequestMapping("/")
-    // Spring MVC is flexible
-    // You can name these methods whatever you want
+    @RequestMapping(path = "/")
     public String showHomePage() {
-        // Returns the name of the view to show
-        // Remember that prefix and suffix will be added
-        // Result will be "/WEB-INF/view/main-menu.jsp"
         return "index";
+    }
+
+    @RequestMapping(path = "/errors")
+    public String showErrorPage(HttpServletRequest request, Model theModel) {
+        int httpErrorCode = (Integer) request.getAttribute("javax.servlet.error.status_code");
+        String errorMsg;
+
+        switch (httpErrorCode) {
+            case 400:
+                errorMsg = "Http Error Code 400: Bad request";
+                break;
+            case 401:
+                errorMsg = "Http Error Code 401: Unauthorized";
+                break;
+            case 404:
+                errorMsg = "Http Error Code 404: Resource not found";
+                break;
+            case 500:
+                errorMsg = "Http Error Code 500: Internal server error";
+                break;
+            default:
+                errorMsg = "Http Error Code " + httpErrorCode;
+        }
+
+        theModel.addAttribute("errorMessage", errorMsg);
+
+        return "errors";
     }
 }

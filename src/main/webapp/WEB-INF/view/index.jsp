@@ -6,19 +6,20 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<c:set var ="cp" value="${pageContext.request.contextPath}" />
 <html>
 <head>
-    <base href="${pageContext.request.contextPath}">
     <title>Jake's Shop :: Home</title>
-    <link rel="stylesheet" type="text/css" href="distjava_jmierow_webapp/css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="${cp}/resources/css/style.css"/>
     <ul>
         <li><a class="active" href="${pageContext.request.contextPath}/">Home</a></li>
-        <li><a href="${pageContext.request.contextPath}/list">Item List</a></li>
-        <li><a href="${pageContext.request.contextPath}/detail">Item Detail</a></li>
+        <li><a href="${pageContext.request.contextPath}/product/list">Product List</a></li>
+        <li><a href="${pageContext.request.contextPath}/detail">Product Detail</a></li>
         <li><a href="${pageContext.request.contextPath}/login">Login</a></li>
     </ul>
 </head>
 <body>
+
 <main>
    <br><br><br><br><br><br><br><br><br><br><br>
     <h1>Jake's Shop</h1>
